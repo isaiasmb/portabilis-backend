@@ -18,24 +18,24 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api'], function () {
 	Route::group(['prefix' => 'aluno'], function() {
-    	Route::get('listar', ['uses' => 'AlunoController@listarAlunos']);
-    	Route::get('{id}', ['uses' => 'AlunoController@buscarAluno']);
-		Route::post('new', ['uses' => 'AlunoController@salvarAluno']);
-		Route::put('/atualizar/{id}', ['uses' => 'AlunoController@atualizarAluno']);
+    	Route::get('listar', ['middleware' => 'cors', 'uses' => 'AlunoController@listarAlunos']);
+    	Route::get('{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@buscarAluno']);
+		Route::post('new', ['middleware' => 'cors', 'uses' => 'AlunoController@salvarAluno']);
+		Route::put('/atualizar/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@atualizarAluno']);
 	});
 
 	Route::group(['prefix' => 'curso'], function() {
-		Route::get('listar', ['uses' => 'CursoController@listarCursos']);
-		Route::get('{id}', ['uses' => 'CursoController@buscarCurso']);
-		Route::post('new', ['uses' => 'CursoController@salvarCurso']);
-		Route::put('/atualizar/{id}', ['uses' => 'CursoController@atualizarCurso']);
+		Route::get('listar', ['middleware' => 'cors', 'uses' => 'CursoController@listarCursos']);
+		Route::get('{id}', ['middleware' => 'cors', 'uses' => 'CursoController@buscarCurso']);
+		Route::post('new', ['middleware' => 'cors', 'uses' => 'CursoController@salvarCurso']);
+		Route::put('/atualizar/{id}', ['middleware' => 'cors', 'uses' => 'CursoController@atualizarCurso']);
 	});
 
 	Route::group(['prefix' => 'matricula'], function() {
-		Route::get('listar', ['uses' => 'MatriculaController@listarMatriculas']);
-		Route::get('{id}', ['uses' => 'MatriculaController@buscarMatricula']);
-		Route::post('new', ['uses' => 'MatriculaController@salvarMatricula']);
-		Route::put('/atualizar/{id}', ['uses' => 'MatriculaController@atualizarMatricula']);
+		Route::get('listar', ['middleware' => 'cors', 'uses' => 'MatriculaController@listarMatriculas']);
+		Route::get('{id}', ['middleware' => 'cors', 'uses' => 'MatriculaController@buscarMatricula']);
+		Route::post('new', ['middleware' => 'cors', 'uses' => 'MatriculaController@salvarMatricula']);
+		Route::put('/atualizar/{id}', ['middleware' => 'cors', 'uses' => 'MatriculaController@atualizarMatricula']);
 
 
 	});
