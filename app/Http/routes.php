@@ -18,10 +18,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api'], function () {
 	Route::group(['prefix' => 'aluno'], function() {
-    	Route::get('listar', ['middleware' => 'cors', 'uses' => 'AlunoController@listarAlunos']);
-    	Route::get('{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@buscarAluno']);
-		Route::post('new', ['middleware' => 'cors', 'uses' => 'AlunoController@salvarAluno']);
-		Route::put('/atualizar/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@atualizarAluno']);
+    	Route::get('/', ['middleware' => 'cors', 'uses' => 'AlunoController@listarAlunos']);
+    	Route::get('/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@buscarAluno']);
+		Route::post('/', ['middleware' => 'cors', 'uses' => 'AlunoController@salvarAluno']);
+		Route::put('/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@atualizarAluno']);
 	});
 
 	Route::group(['prefix' => 'curso'], function() {
