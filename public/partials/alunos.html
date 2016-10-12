@@ -1,0 +1,49 @@
+<div id="page-wrapper" ng-controller="AlunosController">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Alunos</h1>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<!-- /.row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Relação de alunos
+				</div>
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+					<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+						<thead>
+							<tr>
+								<th>CPF</th>
+								<th>RG</th>
+								<th>Data de Nascimento</th>
+								<th>Nome</th>
+								<th>Telefone</th>
+								<th>Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="odd gradeX" ng-repeat="aluno in alunos">
+								<td>{{aluno.cpf}}</td>
+								<td>{{aluno.rg}}</td>
+								<td>{{aluno.data_nascimento}}</td>
+								<td>{{aluno.nome}}</td>
+								<td class="center">{{aluno.telefone}}</td>
+								<td class="center">X</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- /.table-responsive -->
+				</div>
+				<!-- /.panel-body -->
+			</div>
+			<!-- /.panel -->
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+
+</div>
+<!-- /#wrapper -->

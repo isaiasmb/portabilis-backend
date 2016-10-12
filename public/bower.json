@@ -1,0 +1,45 @@
+{
+  "name": "Portabilis",
+  "homepage": "https://github.com/isaiasmb/portabilis-frontend",
+  "authors": [
+    "Isaias"
+  ],
+  "description": "Projeto Front-end para empresa Portabilis",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": [
+    "dist/css/sb-admin-2.css",
+    "dist/css/sb-admin-2.min.css",
+    "dist/js/sb-admin-2.js",
+    "dist/js/sb-admin-2.min.js"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.5.8",
+    "angular-local-storage": "^0.5.2",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "restangular": "^1.5.2",
+    "datatables": "~1.10.4",
+    "datatables-plugins": "~1.0.1",
+    "flot": "~0.8.3",
+    "font-awesome": "~4.6.3",
+    "holderjs": "~2.4.1",
+    "metisMenu": "~1.1.3",
+    "morrisjs": "~0.5.1",
+    "datatables-responsive": "1.0.6",
+    "bootstrap-social": "~4.8.0",
+    "flot.tooltip": "~0.8.4",
+    "ng-cpf-cnpj": "^0.0.5"
+  },
+    "resolutions": {
+    "font-awesome": "~4.6.3"
+  }
+}
