@@ -1,5 +1,7 @@
 # Projeto de teste para empresa Portabilis
 
+Obs: A validação de ano bissexto só funciona quando for inserido 29/02/2000 por exemplo.
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
