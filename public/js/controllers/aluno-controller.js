@@ -17,13 +17,14 @@ angular.module('portabilis')
 
 		$scope.submeter = function() {
 
+			isAnoBissexto($scope.aluno.data_nascimento);
+
 			if ($scope.formAluno.$valid) {
 
 				if($routeParams.alunoId) {
 
 					alunoServices.update({alunoId: $scope.aluno.id}, 
-						$scope.aluno, function() {
-						isAnoBissexto($scope.aluno.data_nascimento);					
+						$scope.aluno, function() {											
 						$scope.mensagem = 'Aluno alterado com sucesso';
 					}, function() {
 						console.log(erro);
@@ -33,8 +34,7 @@ angular.module('portabilis')
 				} else { 
 
 					alunoServices.save($scope.aluno,function() {
-						$scope.aluno = {};
-						isAnoBissexto($scope.aluno.data_nascimento);	
+						$scope.aluno = {};	
 						$scope.mensagem = 'Aluno cadastrado com sucesso';
 					}, function(erro) {
 						console.log(erro);
@@ -57,6 +57,10 @@ angular.module('portabilis')
 			var ano = myRe.exec(data);
 			if(((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)) {
 				$scope.mensagemAnoBissexto = 'Ano bissexto';
+				$scope.formAluno.$valid = false;
+			} else {
+				$scope.mensagemAnoBissexto = '';
+				$scope.formAluno.$valid = true;
 			}
 		};
 
