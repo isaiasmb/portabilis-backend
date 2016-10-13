@@ -8,7 +8,7 @@ angular.module('portabilis')
 		if($routeParams.alunoId) {
 			alunoServices.get({alunoId: $routeParams.alunoId}, function(aluno) {
 				$scope.aluno = aluno; 
-				$scope.aluno.data_nascimento = converteData($scope.aluno.data_nascimento);
+				$scope.aluno.data_nascimento = converteToDataUser($scope.aluno.data_nascimento);
 			}, function(erro) {
 				console.log(erro);
 				$scope.mensagem = 'Não foi possível obter a aluno'
@@ -29,7 +29,6 @@ angular.module('portabilis')
 						$scope.mensagem = 'Aluno alterado com sucesso';
 					}, function() {
 						console.log(erro);
-						console.log($scope.aluno);
 						$scope.mensagem = 'Não foi possível alterar';
 					});
 
@@ -41,15 +40,14 @@ angular.module('portabilis')
 						$scope.mensagem = 'Aluno cadastrado com sucesso';
 					}, function(erro) {
 						console.log(erro);
-						console.log($scope.aluno);
-						$scope.mensagem = 'Não foi possível cadastrar a aluno';
+						$scope.mensagem = 'Não foi possível cadastrar o aluno';
 					});
 				}			
 			}
 		};
 
 		
-		var converteData = function(data) {
+		var converteToDataUser = function(data) {
 			var dataFormatada = new Date(data);
 			return (dataFormatada.getDate() + 1) + '/'
 				 + ((dataFormatada.getMonth() < 9 ? '0' : '') + (dataFormatada.getMonth() + 1)) + '/' 
@@ -65,7 +63,7 @@ angular.module('portabilis')
 			var myRe = new RegExp("[0-9]{4}$");
 			var ano = myRe.exec(data);
 
-			if(data == "29/02/" + ano &&
+			if((data == "29/02/" + ano) &&
 				((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)) {
 				$scope.mensagemAnoBissexto = 'Ano bissexto';
 				$scope.formAluno.$valid = false;
