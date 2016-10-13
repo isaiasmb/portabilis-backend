@@ -5,7 +5,12 @@
     "Isaias"
   ],
   "description": "Projeto Front-end para empresa Portabilis",
-  "main": "",
+  "main": [
+    "dist/css/sb-admin-2.css",
+    "dist/css/sb-admin-2.min.css",
+    "dist/js/sb-admin-2.js",
+    "dist/js/sb-admin-2.min.js"
+  ],
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -14,12 +19,6 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "main": [
-    "dist/css/sb-admin-2.css",
-    "dist/css/sb-admin-2.min.css",
-    "dist/js/sb-admin-2.js",
-    "dist/js/sb-admin-2.min.js"
   ],
   "dependencies": {
     "angular-animate": "^1.5.8",
@@ -37,9 +36,10 @@
     "datatables-responsive": "1.0.6",
     "bootstrap-social": "~4.8.0",
     "flot.tooltip": "~0.8.4",
-    "ng-cpf-cnpj": "^0.0.5"
+    "ng-cpf-cnpj": "^0.0.5",
+    "ngMask": "angular-mask#^3.1.1"
   },
-    "resolutions": {
+  "resolutions": {
     "font-awesome": "~4.6.3"
   }
 }

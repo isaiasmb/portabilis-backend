@@ -1,0 +1,64 @@
+<div id="wrapper" ng-controller="MatriculaController">
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Cadastro de matriculas</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Efetue uma nova matricula
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" ng-submit="submeter()">
+                                        <div class="form-group">
+                                            <label>Aluno</label>
+                                            <select name="aluno" ng-model="matricula.aluno_id" class="form-control" 
+                                                    required ng-controller="AlunosController" 
+                                                    ng-options="aluno.id as aluno.nome for aluno in alunos">
+                                                <option value="">Escolha um aluno</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Curso</label>
+                                            <select name="curso" ng-model="matricula.curso_id" class="form-control" 
+                                                    required ng-controller="CursosController" 
+                                                    ng-options="curso.id as curso.nome for curso in cursos">
+                                                <option value="">Escolha um curso</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Data da matricula</label>
+                                            <input ng-model="matricula.data_matricula" class="form-control" mask="99/99/9999">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>A matrícula foi paga?</label>
+                                            <select ng-model="matricula.pago" class="form-control">
+                                            <option value="1" selected>Sim</option>
+                                            <option value="0">Não</option>
+                                            </select>
+                                        </div>                                                                      
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    </form>
+                                </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+
