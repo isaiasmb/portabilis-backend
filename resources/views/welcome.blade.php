@@ -73,7 +73,7 @@
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
-                                <a href="#"><i class="fa fa-user fa-fw"></i> Alunos<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-user fa-users"></i> Alunos<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
                                         <a href="/#/aluno/new">Cadastrar Alunos</a>
@@ -82,8 +82,29 @@
                                         <a href="/#/alunos">Visualizar Alunos</a>
                                     </li>
                                 </ul>
-                                <!-- /.nav-second-level -->
                             </li>
+                            <li>
+                                <a href="#"><i class="fa fa-user fa-book"></i> Cursos<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/#/curso/new">Cadastrar Curso</a>
+                                    </li>
+                                    <li>
+                                        <a href="/#/cursos">Visualizar Cursos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-user fa-calendar-o"></i> Matriculas<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/#/matricula/new">Efetuar Matricula</a>
+                                    </li>
+                                    <li>
+                                        <a href="/#/matriculas">Visualizar Matriculas</a>
+                                    </li>
+                                </ul>
+                            </li>                           
                         </ul>
                     </div>
                     <!-- /.sidebar-collapse -->
@@ -112,10 +133,19 @@
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src='bower_components/ngMask/dist/ngMask.min.js'></script>
+    <script src="bower_components/cpf_cnpj/build/cpf.js"></script>
+    <script src="bower_components/cpf_cnpj/build/cnpj.js"></script>
+    <script src="bower_components/ng-cpf-cnpj/lib/ngCpfCnpj.js"></script>
 
     <script src="js/main.js"></script>
     <script src="js/controllers/alunos-controller.js"></script>
-    <script src="js/services/aluno-service.js"></script>
+    <script src="js/controllers/aluno-controller.js"></script>
+    <script src="js/controllers/cursos-controller.js"></script>   
+    <script src="js/controllers/curso-controller.js"></script>
+    <script src="js/controllers/matriculas-controller.js"></script>  
+    <script src="js/controllers/matricula-controller.js"></script> 
+    <script src="js/services/services.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="dist/js/sb-admin-2.js"></script>

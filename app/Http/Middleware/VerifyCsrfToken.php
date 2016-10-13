@@ -14,6 +14,7 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
     	'api/aluno/*',
     	'api/matricula/*',
+        'api/matricula/',
     	'api/curso/*'
     ];
 }
