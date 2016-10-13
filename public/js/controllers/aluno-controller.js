@@ -22,6 +22,7 @@ angular.module('portabilis')
 			if ($scope.formAluno.$valid) {
 
 				if($routeParams.alunoId) {
+					$scope.aluno.data_nascimento = converteToData($scope.aluno.data_nascimento);
 
 					alunoServices.update({alunoId: $scope.aluno.id}, 
 						$scope.aluno, function() {											
@@ -33,6 +34,7 @@ angular.module('portabilis')
 					});
 
 				} else { 
+					$scope.aluno.data_nascimento = converteToData($scope.aluno.data_nascimento);
 
 					alunoServices.save($scope.aluno,function() {
 						$scope.aluno = {};	
@@ -53,6 +55,11 @@ angular.module('portabilis')
 				 + ((dataFormatada.getMonth() < 9 ? '0' : '') + (dataFormatada.getMonth() + 1)) + '/' 
 				 + dataFormatada.getFullYear();
 		};
+
+		var converteToData = function(data) {
+			var newdate = data.split("/").reverse().join("-");
+			return newdate;
+		}
 
 		var isAnoBissexto = function(data) {
 			var myRe = new RegExp("[0-9]{4}$");
