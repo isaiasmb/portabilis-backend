@@ -13,10 +13,10 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
     	'api/aluno/*',
-        'api/aluno/',
+        'api/aluno',
     	'api/matricula/*',
-        'api/matricula/',
+        'api/matricula',
     	'api/curso/*',
-        'api/curso/'
+        'api/curso'
     ];
 }

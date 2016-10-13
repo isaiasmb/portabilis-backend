@@ -28,6 +28,7 @@ angular.module('portabilis')
 						$scope.mensagem = 'Aluno alterado com sucesso';
 					}, function() {
 						console.log(erro);
+						console.log($scope.aluno);
 						$scope.mensagem = 'Não foi possível alterar';
 					});
 
@@ -38,6 +39,7 @@ angular.module('portabilis')
 						$scope.mensagem = 'Aluno cadastrado com sucesso';
 					}, function(erro) {
 						console.log(erro);
+						console.log($scope.aluno);
 						$scope.mensagem = 'Não foi possível cadastrar a aluno';
 					});
 				}			

@@ -15,9 +15,7 @@ angular.module('portabilis')
 
 		$scope.submeter = function() {
 
-			if ($scope.formulario.$valid) {
-
-
+			//if ($scope.formulario.$valid) {
 
 				if($routeParams.cursoId) {
 
@@ -40,9 +38,7 @@ angular.module('portabilis')
 					});
 				}
 
-				console.log($scope.curso);
-				console.log($scope.mensagem);
-			}
+			//}
 		};
 
 });
