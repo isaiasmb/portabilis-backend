@@ -63,10 +63,12 @@ angular.module('portabilis')
 			var myRe = new RegExp("[0-9]{4}$");
 			var ano = myRe.exec(data);
 
-			if((data == "29/02/" + ano) &&
-				((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)) {
+			var newdate = data.split("/");
+
+			if((newdate[0] == 29 && newdate[1] == 02) &&
+				(((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0))) {
 				$scope.mensagemAnoBissexto = 'Ano bissexto';
-				$scope.formAluno.$valid = false;
+				$scope.formAluno.$valid = false;					
 			} else {
 				$scope.mensagemAnoBissexto = '';
 				$scope.formAluno.$valid = true;
