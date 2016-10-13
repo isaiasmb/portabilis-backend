@@ -27,6 +27,7 @@ angular.module('portabilis')
 					
 					matriculaServices.update({matriculaId: $scope.matricula.id}, 
 						$scope.matricula, function() {
+						$scope.matricula.data_matricula = converteToDataUser($scope.matricula.data_matricula);
 						$scope.mensagem = 'Matricula alterada com sucesso';
 					}, function() {
 						console.log(erro);

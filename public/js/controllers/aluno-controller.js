@@ -25,7 +25,8 @@ angular.module('portabilis')
 					$scope.aluno.data_nascimento = converteToData($scope.aluno.data_nascimento);
 
 					alunoServices.update({alunoId: $scope.aluno.id}, 
-						$scope.aluno, function() {											
+						$scope.aluno, function() {
+						$scope.aluno.data_nascimento = converteToDataUser($scope.aluno.data_nascimento);											
 						$scope.mensagem = 'Aluno alterado com sucesso';
 					}, function() {
 						console.log(erro);
