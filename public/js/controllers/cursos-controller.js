@@ -7,6 +7,11 @@ angular.module('portabilis')
 
 	cursoServices.query(function(cursos) {
 		$scope.cursos = cursos;
+/*		for(var i=0; i<$scope.cursos.length; i++) {
+    		console.log(i, $scope.cursos[i]);
+    		$scope.cursos[i].valor_inscricao = converteMoeda();
+    		console.log(converteMoeda());
+		}*/
 
 	}, function(erro) {
 		console.log(erro);
@@ -24,5 +29,13 @@ angular.module('portabilis')
 		});
 	};
 
+
+
+	var converteMoeda = function() {
+		var myCurrency = 'USD',
+        currencyMaskFilter = $filter('currencyMask');
+
+        return currencyMaskFilter('unmask', myCurrency);
+	}
 
 });

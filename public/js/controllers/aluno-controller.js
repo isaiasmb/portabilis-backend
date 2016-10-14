@@ -46,11 +46,12 @@ angular.module('portabilis')
 				}			
 			}
 		};
-
 		
 		var converteToDataUser = function(data) {
-			var newdate = data.split("-").reverse().join("/");
-			return newdate;
+			var dataFormatada = new Date(data);
+			return (dataFormatada.getDate() + 1) + '/'
+				 + ((dataFormatada.getMonth() < 9 ? '0' : '') + (dataFormatada.getMonth() + 1)) + '/' 
+				 + dataFormatada.getFullYear();
 		};
 
 		var converteToData = function(data) {

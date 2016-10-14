@@ -8,7 +8,10 @@ angular.module('portabilis')
 
 	alunoServices.query(function(alunos) {
 		$scope.alunos = alunos;
-		$scope.alunos.data_nascimento = converteData($scope.alunos.data_nascimento);
+		$scope.alunos.data_nascimento = converteDataUser($scope.alunos.data_nascimento);
+		for(var i=0; i<$scope.alunos.length; i++) {
+    		$scope.alunos[i].data_nascimento = converteDataUser($scope.alunos[i].data_nascimento);
+		}
 		
 	}, function(erro) {
 		console.log(erro);
@@ -26,7 +29,7 @@ angular.module('portabilis')
 		});
 	};
 
-	var converteData = function(data) {
+	var converteDataUser = function(data) {
 		var dataFormatada = new Date(data);
 		return (dataFormatada.getDate() + 1) + '/'
 			 + ((dataFormatada.getMonth() < 9 ? '0' : '') + (dataFormatada.getMonth() + 1)) + '/' 
