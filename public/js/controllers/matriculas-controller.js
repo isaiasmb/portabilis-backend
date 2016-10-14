@@ -17,7 +17,7 @@ angular.module('portabilis')
 		matriculaServices.delete({fotoId: matricula.id}, function() {
 			var indiceDaMatricula = $scope.matriculas.indexOf(matricula);
 			$scope.matriculas.splice(indiceDaMatricula, 1);
-			$scope.mensagem = 'Foto ' + matricula.titulo + ' removido com sucesso!';
+			$scope.mensagem = 'Matricula ' + matricula.titulo + ' removido com sucesso!';
 		}, function(erro) {
 			console.log(erro);
 			$scope.mensagem = 'Não foi possível apagar a matricula ' + matricula.titulo;

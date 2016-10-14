@@ -43,6 +43,10 @@ class Aluno extends Model
 		}
 	}
 
+	public function deleteAluno($id) {
+		Aluno::destroy($id);
+	}
+
 	public function matricula() {
 		return $this->hasMany('App\Matricula', 'aluno_id', 'id');
 	}

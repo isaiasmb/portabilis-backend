@@ -19,7 +19,7 @@ angular.module('portabilis')
 		alunoServices.delete({fotoId: aluno.id}, function() {
 			var indiceDoAluno = $scope.alunos.indexOf(aluno);
 			$scope.alunos.splice(indiceDoAluno, 1);
-			$scope.mensagem = 'Foto ' + aluno.titulo + ' removido com sucesso!';
+			$scope.mensagem = 'Aluno ' + aluno.titulo + ' removido com sucesso!';
 		}, function(erro) {
 			console.log(erro);
 			$scope.mensagem = 'Não foi possível apagar a aluno ' + aluno.titulo;

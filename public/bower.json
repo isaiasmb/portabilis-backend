@@ -37,7 +37,8 @@
     "bootstrap-social": "~4.8.0",
     "flot.tooltip": "~0.8.4",
     "ng-cpf-cnpj": "^0.0.5",
-    "ngMask": "angular-mask#^3.1.1"
+    "ngMask": "angular-mask#^3.1.1",
+    "ngCurrencyMask": "ng-currency-mask#^1.0.61"
   },
   "resolutions": {
     "font-awesome": "~4.6.3"

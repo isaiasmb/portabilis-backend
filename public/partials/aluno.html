@@ -17,7 +17,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+                                    <p ng-show="mensagem.length && formALuno.$valid" class="alert alert-info">{{mensagem}}</p>
                                     <form novalidate role="form" ng-submit="submeter()" name="formAluno">
                                         <div class="form-group">
                                             <label>CPF</label>

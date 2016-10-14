@@ -22,6 +22,7 @@ Route::group(['prefix' => 'api'], function () {
     	Route::get('/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@buscarAluno']);
 		Route::post('/', ['middleware' => 'cors', 'uses' => 'AlunoController@salvarAluno']);
 		Route::put('/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@atualizarAluno']);
+		Route::delete('/{id}', ['middleware' => 'cors', 'uses' => 'AlunoController@apagarAluno']);
 	});
 
 	Route::group(['prefix' => 'curso'], function() {

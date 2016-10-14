@@ -51,4 +51,8 @@ class AlunoController extends Controller {
 		return \Response::json($response, $statuscode);
 	}
 
+	public function apagarALuno($id) {
+		$this->aluno->deleteAluno($id);
+	}
+
 }

@@ -1,4 +1,5 @@
-angular.module('portabilis', ['ngAnimate', 'ngRoute', 'ngResource', 'services', 'ngMask', 'ngCpfCnpj'])
+angular.module('portabilis', ['ngAnimate', 'ngRoute', 'ngResource', 'services', 'ngMask', 
+    'ngCpfCnpj', 'ngCurrencyMask'])
     .config(function($routeProvider, $locationProvider) {
 
         //$locationProvider.html5Mode(true);
